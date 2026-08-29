@@ -913,6 +913,20 @@ final class AttributeTests: ParserTestCase {
       macro m()
       """
     )
+
+    assertParse(
+      """
+      @attached(extension, names: named(test),)
+      macro m()
+      """
+    )
+
+    assertParse(
+      """
+      @attached(member, names: arbitrary,)
+      macro m()
+      """
+    )
   }
 
   func testConventionAttributeInArrayType() {
