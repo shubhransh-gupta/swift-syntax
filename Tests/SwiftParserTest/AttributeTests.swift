@@ -909,6 +909,13 @@ final class AttributeTests: ParserTestCase {
 
     assertParse(
       """
+      @attached(extension,)
+      macro m()
+      """
+    )
+
+    assertParse(
+      """
       @attached(extension, names: named(test))
       macro m()
       """
